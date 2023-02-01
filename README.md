@@ -8,7 +8,7 @@
 /luck
 ~~~
 
-### Premission
+### Permission
 ~~~
 vastsea.luck
 ~~~
