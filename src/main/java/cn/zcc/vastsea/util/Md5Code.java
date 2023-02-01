@@ -8,15 +8,15 @@ public abstract class Md5Code {
     //字节流转Md5
     public static String byteToMd5(byte[] bytes) {
         try {
-            MessageDigest messageDigest = MessageDigest.getInstance("SHA-1");
+            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
             messageDigest.update(bytes);
             byte[] digest = messageDigest.digest();
-            StringBuilder stringBuffer = new StringBuilder();
+            StringBuilder builder = new StringBuilder();
             for (byte b : digest) {
                 String s = Integer.toHexString(b & 0xff);
-                stringBuffer.append(s.length() > 1 ? s : "0" + s);
+                builder.append(s.length() > 1 ? s : "0" + s);
             }
-            return stringBuffer.toString();
+            return builder.toString();
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e);
         }
