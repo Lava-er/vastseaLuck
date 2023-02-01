@@ -1,5 +1,5 @@
 name: VastseaLuck
-main: cn.zcc.VastseaLuck
+main: cn.zcc.vastsea.VastseaLuck
 version: ${project.version}
 author: Zcc
 description: A get Luck today plugin!!!
